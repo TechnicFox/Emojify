@@ -29,7 +29,7 @@ public class EmojiSelectorMenu extends Menu {
         }catch (Exception e){
             Bukkit.getLogger().severe("Error loading name of emoji menu: " + e.getMessage());
         }
-        return "Oops! Something went wrong! Please contact the developer.";
+        return "Щось пішло не так! Перевірте конфігурацію!";
     }
 
     @Override
@@ -55,7 +55,7 @@ public class EmojiSelectorMenu extends Menu {
             StringSelection strSel = new StringSelection(event.getCurrentItem().getItemMeta().getItemName());
             clipboard.setContents(strSel, null);
             event.getWhoClicked().closeInventory();
-            event.getWhoClicked().sendMessage(ChatColor.GREEN + "Copied to clipboard!");
+            event.getWhoClicked().sendMessage(ChatColor.GREEN + "Скопійовано в буфер обміну!");
         }catch (Exception e){
             Bukkit.getLogger().severe("Error getting emoji in a menu: " + e.getMessage());
         }
@@ -71,7 +71,7 @@ public class EmojiSelectorMenu extends Menu {
             ItemStack exit = new ItemStack(Material.MAP);
             ItemMeta meta = exit.getItemMeta();
             meta.setCustomModelData(1010);
-            meta.setItemName("§c§lBack");
+            meta.setItemName("§c§lПовернутися");
             exit.setItemMeta(meta);
             this.inventory.setItem(getSlots()-1, exit);
         }catch (Exception e){
