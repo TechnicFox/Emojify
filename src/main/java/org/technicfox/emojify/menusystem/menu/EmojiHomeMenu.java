@@ -28,7 +28,7 @@ public class EmojiHomeMenu extends Menu {
             Bukkit.getLogger().severe("Error loading name of main menu: " + e.getMessage());
             e.printStackTrace();
         }
-        return "Oops! Something went wrong! Please contact the developer.";
+        return "Щось пішло не так! Перевірте конфігурацію!";
     }
 
     @Override
@@ -72,7 +72,7 @@ public class EmojiHomeMenu extends Menu {
             ItemStack exit = new ItemStack(Material.MAP);
             ItemMeta meta = exit.getItemMeta();
             meta.setCustomModelData(1010);
-            meta.setItemName("§c§lExit");
+            meta.setItemName("§c§lВийти");
             exit.setItemMeta(meta);
             this.inventory.setItem(getSlots()-1, exit);
         }catch (Exception e){
