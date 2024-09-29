@@ -55,7 +55,7 @@ public class EmojiSelectorMenu extends Menu {
             StringSelection strSel = new StringSelection(event.getCurrentItem().getItemMeta().getItemName());
             clipboard.setContents(strSel, null);
             event.getWhoClicked().closeInventory();
-            event.getWhoClicked().sendMessage(ChatColor.GREEN + "Скопійовано в буфер обміну!");
+            event.getWhoClicked().sendMessage(ChatColor.GREEN + "Скопійовано в буфер обміну!");
         }catch (Exception e){
             Bukkit.getLogger().severe("Error getting emoji in a menu: " + e.getMessage());
         }
