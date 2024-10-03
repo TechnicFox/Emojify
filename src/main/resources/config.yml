@@ -1,7 +1,7 @@
 resourcepack:
   enabled: true
   url: "https://github.com/TechnicFox/Emojify/raw/refs/heads/uk-ua/data/Emojify.zip"
-  sha1: "f1c49fe735e23ae7bc2a074a86d7b42132b6e7e9"
+  sha1: "dd6767d105449152110d395acf054b83f1ac6a7d"
   prompt: "&6Завантажте ресурспак (без нього плагін Emojify не працюватиме!)"
   force: false
 
