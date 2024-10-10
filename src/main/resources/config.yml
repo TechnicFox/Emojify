@@ -4,14 +4,13 @@ resourcepack:
   sha1: "dd6767d105449152110d395acf054b83f1ac6a7d"
   prompt: "&6Завантажте ресурспак (без нього плагін Emojify не працюватиме!)"
   force: false
-
+MainMenuConfig:
+  #Can be used for custom menu.
+  #七 - is a negative space symbol used to align the menu.
+  #&f - is a color code (without it your custom menu will be dark).
+  invName: "&f七七七七七七七七ㇺ"
+  slots: 54 #Number of slots in the inventory. IT HAS TO BE A MULTIPLE OF 9.
 inventories:
-  MainMenuConfig:
-    #Can be used for custom menu.
-    #七 - is a negative space symbol used to align the menu.
-    #&f - is a color code (without it your custom menu will be dark).
-    invName: "&f七七七七七七七七ㇺ"
-    slots: 54 #Number of slots in the inventory. IT HAS TO BE A MULTIPLE OF 9.
   slot0:
     name: "&b&lSmiles"  #name of the item in the main inventory
     invName: "&f七七七七七七七七ㇺ"
