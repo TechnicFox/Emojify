@@ -56,9 +56,9 @@ public class EmojiSelectorMenu extends Menu {
             String name = event.getCurrentItem().getItemMeta().getItemName();
             Player player = (Player) event.getWhoClicked();
 
-            TextComponent messege = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a&l&nClick me to copy emoji:&r ") + name);
+            TextComponent messege = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&a&l&nКлікніть, щоб скопіювати:&r ") + name);
 
-            messege.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text(ChatColor.translateAlternateColorCodes('&', "&a&l&nClick me to copy emoji:&r ") + name)));
+            messege.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text(ChatColor.translateAlternateColorCodes('&', "&a&l&nКлікніть, щоб скопіювати:&r ") + name)));
             messege.setClickEvent(new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, name));
             player.spigot().sendMessage(messege);
 
