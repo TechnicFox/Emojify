@@ -2,43 +2,42 @@ resourcepack:
   enabled: true
   url: "https://github.com/TechnicFox/Emojify/raw/refs/heads/uk-ua/data/Emojify.zip" #url to the resource pack
   sha1: "0dbc60bf18a1de438f9c3f48f1221e42ec54126a" #sha1 hash of the resource pack
-  prompt: "&6Please download the Emojify resource pack (without it plugin will not work)" #prompt when player joins the server
+  prompt: "<gold>Please download the Emojify resource pack (without it plugin will not work)</gold>" #prompt when player joins the server
   force: false #force the resource pack
 MainMenuConfig:
   #Can be used for custom menu.
   #七 - is a negative space symbol used to align the menu.
-  #&f - is a color code (without it your custom menu will be dark).
-  invName: "&f七七七七七七七七ㇺ"
+  invName: "七七七七七七七七ㇺ"
   slots: 54 #Number of slots in the inventory. IT HAS TO BE A MULTIPLE OF 9.
 inventories:
   slot0:
-    name: "&b&lSmiles"  #name of the item in the main inventory
-    invName: "&f七七七七七七七七ㇺ"
+    name: "<aqua><bold>Smiles</bold></aqua>"  #name of the item in the main inventory
+    invName: "七七七七七七七七ㇺ"
     slots: 54
     id: 1 #id of the custom item
   slot1:
-    name: "&b&lHearts"
+    name: "<aqua><bold>Hearts</bold></aqua>"
     invName: "&f七七七七七七七七ㇺ"
     slots: 54
     id: 101
   slot2:
-    name: "&b&lЕмоції з діскорду (1/2)"
-    invName: "&f七七七七七七七七ㇺ"
+    name: "<aqua><bold>Емоції з діскорду (1/2)</bold></aqua>"
+    invName: "七七七七七七七七ㇺ"
     slots: 54
     id: 292
   slot3:
-    name: "&b&lЕмоції з діскорду (2/2)"
-    invName: "&f七七七七七七七七ㇺ"
+    name: "<aqua><bold>Емоції з діскорду (2/2)</bold></aqua>"
+    invName: "七七七七七七七七ㇺ"
     slots: 54
     id: 292
   slot4:
-    name: "&b&lЕмоції з діскорду [АРХІВ] (1/2)"
-    invName: "&f七七七七七七七七ㇺ"
+    name: "<aqua><bold>Емоції з діскорду [АРХІВ] (1/2)</bold></aqua>"
+    invName: "七七七七七七七七ㇺ"
     slots: 54
     id: 292
   slot5:
-    name: "&b&lЕмоції з діскорду [АРХІВ] (2/2)"
-    invName: "&f七七七七七七七七ㇺ"
+    name: "<aqua><bold>Емоції з діскорду [АРХІВ] (2/2)</bold></aqua>"
+    invName: "七七七七七七七七ㇺ"
     slots: 54
     id: 292
 

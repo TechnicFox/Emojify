@@ -30,7 +30,7 @@ public class EmojiSelectorMenu extends Menu {
         }catch (Exception e) {
             Emojify.getLoggerEmojify().severe("Error loading name of emoji menu: " + e.getMessage());
             e.printStackTrace();
-            return Component.text("Oops! Something went wrong! Please contact the developer.");
+            return Component.text("Упс! Щось пішло не так! Будь ласка, зв'яжіться з автором.").color(NamedTextColor.RED);
         }
     }
 
@@ -57,7 +57,7 @@ public class EmojiSelectorMenu extends Menu {
 
             Player player = (Player) event.getWhoClicked();
             var mm = MiniMessage.miniMessage();
-            Component message = mm.deserialize("<b><u><green>Click me to copy emoji:</green></u></b>"+" "+name);
+            Component message = mm.deserialize("<b><u><green>Натисніть, щоб скопіювати:</green></u></b>"+" "+name);
             message = message.hoverEvent(HoverEvent.showText(message));
             message = message.clickEvent(ClickEvent.copyToClipboard(name));
 
@@ -77,10 +77,10 @@ public class EmojiSelectorMenu extends Menu {
                 getEmoji(i, Emojify.getConfigUtil().getConfig().getInt(this.playerMenuUtility.getEmojiSlot()+".slot"+i+".id"),
                         Emojify.getConfigUtil().getConfig().getString(this.playerMenuUtility.getEmojiSlot()+".slot"+i+".name"),true);
             }
-            ItemStack exit = new ItemStack(Material.MAP);
+            ItemStack exit = ItemStack.of(Material.MAP);
             ItemMeta meta = exit.getItemMeta();
             meta.setCustomModelData(1010);
-            meta.itemName(Component.text("Exit").color(NamedTextColor.RED).decorate(TextDecoration.BOLD));
+            meta.itemName(Component.text("Вийти").color(NamedTextColor.RED).decorate(TextDecoration.BOLD));
             exit.setItemMeta(meta);
             this.inventory.setItem(getSlots()-1, exit);
         }catch (Exception e){

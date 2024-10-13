@@ -1,10 +1,12 @@
 package org.technicfox.emojify.listeners;
 
-import org.bukkit.ChatColor;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 import org.technicfox.emojify.Emojify;
 import org.technicfox.emojify.menusystem.menu.EmojiHomeMenu;
 
@@ -13,9 +15,9 @@ import org.technicfox.emojify.menusystem.menu.EmojiHomeMenu;
 
 public class CommandListener implements CommandExecutor {
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(ChatColor.RED + "Тільки гравці можуть використовувати цю команду!");
+            sender.sendMessage(Component.text("Тільки гравці можуть використовувати цю команду!").color(NamedTextColor.RED));
             return false;
         }
 

@@ -27,7 +27,7 @@ public class EmojiHomeMenu extends Menu {
         }catch (Exception e){
             Emojify.getLoggerEmojify().severe("Error loading name of emoji menu: " + e.getMessage());
             e.printStackTrace();
-            return Component.text("Oops! Something went wrong! Please contact the developer.");
+            return Component.text("Упс! Щось пішло не так! Будь ласка, зв'яжіться з автором.").color(NamedTextColor.RED);
         }
     }
 
@@ -69,10 +69,10 @@ public class EmojiHomeMenu extends Menu {
                 getEmoji(i, Emojify.getConfigUtil().getConfig().getInt("inventories.slot" + i + ".id"),
                         Emojify.getConfigUtil().getConfig().getString("inventories.slot" + i + ".name"), false);
             }
-            ItemStack exit = new ItemStack(Material.MAP);
+            ItemStack exit = ItemStack.of(Material.MAP);
             ItemMeta meta = exit.getItemMeta();
             meta.setCustomModelData(1010);
-            meta.itemName(Component.text("Exit").color(NamedTextColor.RED).decorate(TextDecoration.BOLD));
+            meta.itemName(Component.text("Вийти").color(NamedTextColor.RED).decorate(TextDecoration.BOLD));
             exit.setItemMeta(meta);
             this.inventory.setItem(getSlots()-1, exit);
         }catch (Exception e){

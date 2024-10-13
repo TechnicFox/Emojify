@@ -47,7 +47,7 @@ public abstract class Menu implements InventoryHolder {
 
     public void getEmoji(Integer item, Integer id, String name, boolean hideTooltip) {
         try {
-            final ItemStack emoji = new ItemStack(Material.ENCHANTED_BOOK);
+            final ItemStack emoji = ItemStack.of(Material.ENCHANTED_BOOK);
             ItemMeta itemMeta = emoji.getItemMeta();
 
             var mm = MiniMessage.miniMessage();
